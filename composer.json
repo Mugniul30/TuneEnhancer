@@ -1,0 +1,20 @@
+{
+    "name": "mugniul/tune-enhancer",
+    "description": "Elevate your audio experience with TuneEnhancer. This plugin allows you to select two different audio tracks from your media library-one for standard playback and the other for enhanced audio. Seamlessly switch between tracks with a customizable \\\"Enhance Audio\\\" button, perfect for showcasing before-and-after audio effects. Fully integrated with WordPress, TuneEnhancer makes it easy to create engaging audio experiences on your website.",
+    "type": "wordpress-plugin",
+    "license": "GPLv2",
+    "authors": [
+        {
+            "name": "Mugniul Afif",
+            "email": "mugniulafif@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Tune\\Enhancer\\":"includes/"
+        },
+        "files": []
+    }
+}
