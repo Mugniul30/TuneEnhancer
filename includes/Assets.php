@@ -28,7 +28,7 @@ class Assets{
             'tuneEnhancer-style' => [
                 'src' => TuneEnhancer_ASSETS. '/css/frontend.css',
                 'version' => filemtime(TuneEnhancer_PATH. '/assets/css/frontend.css'),
-                'deps' => ['jquery']
+                
             ],
             'tuneEnhancer-admin-style' => [
                 'src' => TuneEnhancer_ASSETS. '/css/admin_style.css',
@@ -38,6 +38,9 @@ class Assets{
     }
 
     public function enqueue_assets(){
+
+        wp_enqueue_style('font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css', [], null);
+
         $scripts= $this-> get_scripts();
 
         foreach ($scripts as $handle => $script) {

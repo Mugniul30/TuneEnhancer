@@ -64,7 +64,7 @@ final class TuneEnhancer{
         define('TuneEnhancer_VERSION', self::version);
         define('TuneEnhancer_FILE', __FILE__);
         define('TuneEnhancer_PATH', __DIR__);
-        define('TuneEnhancer_URL', plugins_url ('', TuneEnhancer_FILE ));
+        define('TuneEnhancer_URL', plugins_url ('', __FILE__));
         define('TuneEnhancer_ASSETS', TuneEnhancer_URL.'/assets');
 
     }
@@ -75,6 +75,8 @@ final class TuneEnhancer{
     }
 
     function init_plugin(){
+
+        new Tune\Enhancer\Assets();
 
         if (is_admin()) {
             new Tune\Enhancer\Admin();
