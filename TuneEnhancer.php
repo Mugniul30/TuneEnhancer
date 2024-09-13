@@ -28,7 +28,7 @@ final class TuneEnhancer{
 
 
     /**
-     * Class Construtor
+     * Class Constructor
      *
      */
     private function __construct(){
@@ -41,7 +41,7 @@ final class TuneEnhancer{
     /**
      * Intializes a singleton instance
      *
-     * @return \custom_plugin
+     * @return \TuneEnhancer
      */
 
     public static function init(){
@@ -69,9 +69,20 @@ final class TuneEnhancer{
 
     }
 
+    public function activate(){
+        $installer = new Tune\Enhancer\Installer();
+        $installer->add_version();
+    }
 
     function init_plugin(){
-        new Tune\Enhancer\Admin();
+
+        if (is_admin()) {
+            new Tune\Enhancer\Admin();
+        }else {
+            new Tune\Enhancer\Frontend();
+        }
+
+        
     }
 
 }
