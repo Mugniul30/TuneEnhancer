@@ -32,8 +32,7 @@ class Assets{
             ],
             'tuneEnhancer-admin-style' => [
                 'src' => TuneEnhancer_ASSETS. '/css/admin_style.css',
-                'version' => filemtime(TuneEnhancer_PATH. '/assets/css/admin_style.css'),
-                'deps' => ['jquery']
+                'version' => filemtime(TuneEnhancer_PATH. '/assets/css/admin_style.css')
             ]
         ];
     }
