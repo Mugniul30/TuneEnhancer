@@ -49,20 +49,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
     audioPlayer.addEventListener("ended", function () {
         isPlaying = false;
-        playPauseBtn.innerHTML = '<i class="fa-solid fa-circle-play fa-2xl" style="color: #0b2323;"></i>';
+        playPauseBtn.innerHTML = '<i class="fa-solid fa-circle-play fa-2xl" style="color: #0b2323;border:0px transparent;"></i>';
         progressBar.style.width = "0";
     });
 
     function playAudio() {
         audioPlayer.play();
         isPlaying = true;
-        playPauseBtn.innerHTML = '<i class="fa-solid fa-circle-pause fa-2xl" style="color: #0b2323;"></i>';
+        playPauseBtn.innerHTML = '<i class="fa-solid fa-circle-pause fa-2xl" style="color: #0b2323;border:0px transparent;"></i>';
     }
 
     function pauseAudio() {
         audioPlayer.pause();
         isPlaying = false;
-        playPauseBtn.innerHTML = '<i class="fa-solid fa-circle-play fa-2xl" style="color: #0b2323;"></i>';
+        playPauseBtn.innerHTML = '<i class="fa-solid fa-circle-play fa-2xl" style="color: #0b2323;border:0px transparent;"></i>';
     }
 
     function updateProgressBar() {
